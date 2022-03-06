@@ -23,8 +23,7 @@ class ListUserAdapter(private val listUser: ArrayList<User>): RecyclerView.Adapt
     }
 
     override fun onBindViewHolder(holder: ListViewHolder, position: Int) {
-        val (username, name, photo, location, followers, following, repository, company) = listUser[position]
-        holder.imgUser.setImageResource(photo!!)
+        val (username, name, photo) = listUser[position]
         holder.textUsername.text = username
         holder.textName.text = name
         Glide.with(holder.itemView.context)
@@ -32,10 +31,7 @@ class ListUserAdapter(private val listUser: ArrayList<User>): RecyclerView.Adapt
             .circleCrop()
             .into(holder.imgUser)
         holder.imgUser.setOnClickListener {
-            val userDetail = User(
-                username, name, photo, location, followers, following, repository, company
-            )
-
+            val userDetail = listUser[position]
             val intent = Intent(holder.itemView.context, DetailActivity::class.java)
             intent.putExtra(DetailActivity.EXTRA_USER, userDetail)
             holder.itemView.context.startActivity(intent)

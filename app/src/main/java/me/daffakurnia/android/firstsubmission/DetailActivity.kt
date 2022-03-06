@@ -12,10 +12,6 @@ import me.daffakurnia.android.firstsubmission.data.User
 
 class DetailActivity : AppCompatActivity() {
 
-    companion object {
-        const val EXTRA_USER = "extra_user"
-    }
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_detail)
@@ -47,7 +43,7 @@ class DetailActivity : AppCompatActivity() {
 
         val btnBack: Button = findViewById(R.id.btn_back)
         btnBack.setOnClickListener {
-            startActivity(Intent(this@DetailActivity, MainActivity::class.java))
+            onBackPressed()
         }
 
         val btnGithubProfile: Button = findViewById(R.id.btn_github_profile)
@@ -56,5 +52,9 @@ class DetailActivity : AppCompatActivity() {
             val githubAction = Intent(Intent.ACTION_VIEW, Uri.parse("$github/${detailUser?.username.toString()}"))
             startActivity(githubAction)
         }
+    }
+
+    companion object {
+        const val EXTRA_USER = "extra_user"
     }
 }

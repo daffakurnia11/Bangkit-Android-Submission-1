@@ -15,7 +15,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        supportActionBar?.title = "Github User"
+        supportActionBar?.title = resources.getString(R.string.text_title)
         recycleUser = findViewById(R.id.recycle_user)
         recycleUser.setHasFixedSize(true)
 

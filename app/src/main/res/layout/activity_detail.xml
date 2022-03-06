@@ -23,7 +23,7 @@
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:contentDescription="@string/text_user_avatar"
-            android:src="@drawable/user11"
+            tools:src="@tools:sample/avatars"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -34,7 +34,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="4dp"
             android:gravity="center"
-            android:text="@string/text_default_username"
+            tools:text="@string/text_default_username"
             android:textSize="24sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
@@ -46,7 +46,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="@string/text_default_name"
+            tools:text="@string/text_default_name"
             android:textSize="16sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
@@ -59,7 +59,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="8dp"
             android:gravity="center"
-            android:text="@string/text_default_location"
+            tools:text="@string/text_default_location"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
@@ -72,7 +72,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="4dp"
             android:gravity="center"
-            android:text="@string/text_default_company"
+            tools:text="@string/text_default_company"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
@@ -89,42 +89,42 @@
                 android:id="@+id/text_number_followers"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/text_number" />
+                tools:text="@string/text_number" />
 
             <TextView
                 android:id="@+id/text_followers"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="4dp"
-                android:text="@string/text_followers" />
+                tools:text="@string/text_followers" />
 
             <TextView
                 android:id="@+id/text_number_following"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
-                android:text="@string/text_number" />
+                tools:text="@string/text_number" />
 
             <TextView
                 android:id="@+id/text_following"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="4dp"
-                android:text="@string/text_following" />
+                tools:text="@string/text_following" />
 
             <TextView
                 android:id="@+id/text_number_repository"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
-                android:text="@string/text_number" />
+                tools:text="@string/text_number" />
 
             <TextView
                 android:id="@+id/text_repository"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="4dp"
-                android:text="@string/text_repositories" />
+                tools:text="@string/text_repositories" />
 
         </LinearLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
@@ -135,7 +135,7 @@
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="8dp"
         android:layout_marginTop="8dp"
-        android:text="Go to Github Profile"
+        android:text="@string/text_github_profile"
         android:textColor="@color/aqua"
         android:backgroundTint="@color/blue"
         app:layout_constraintTop_toBottomOf="@id/card_detail"
