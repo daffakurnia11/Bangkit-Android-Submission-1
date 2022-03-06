@@ -1,6 +1,7 @@
 package me.daffakurnia.android.firstsubmission
 
 import android.content.Intent
+import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
@@ -47,6 +48,13 @@ class DetailActivity : AppCompatActivity() {
         val btnBack: Button = findViewById(R.id.btn_back)
         btnBack.setOnClickListener {
             startActivity(Intent(this@DetailActivity, MainActivity::class.java))
+        }
+
+        val btnGithubProfile: Button = findViewById(R.id.btn_github_profile)
+        btnGithubProfile.setOnClickListener {
+            val github = "https://github.com"
+            val githubAction = Intent(Intent.ACTION_VIEW, Uri.parse("$github/${detailUser?.username.toString()}"))
+            startActivity(githubAction)
         }
     }
 }

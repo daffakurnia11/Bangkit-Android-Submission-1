@@ -7,6 +7,7 @@
     tools:context=".DetailActivity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/card_detail"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="8dp"
@@ -127,6 +128,19 @@
 
         </LinearLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <Button
+        android:id="@+id/btn_github_profile"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="8dp"
+        android:layout_marginTop="8dp"
+        android:text="Go to Github Profile"
+        android:textColor="@color/aqua"
+        android:backgroundTint="@color/blue"
+        app:layout_constraintTop_toBottomOf="@id/card_detail"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/btn_back"
