@@ -12,7 +12,7 @@
     <string name="btn_return_back">Return to User Lists</string>
 
     <string-array name="username">
-        <item>JakeWharton</item>
+        <item>daffakurnia11</item>
         <item>amitshekhariitbhu</item>
         <item>romainguy</item>
         <item>chrisbanes</item>
@@ -22,10 +22,11 @@
         <item>budioktaviyan</item>
         <item>hendisantika</item>
         <item>sidiqpermana</item>
+        <item>JakeWharton</item>
     </string-array>
 
     <string-array name="name">
-        <item>Jake Wharton</item>
+        <item>Daffa Kurnia Fatah</item>
         <item>Amit Shekhar</item>
         <item>Romain Guy</item>
         <item>Chris Banes</item>
@@ -35,10 +36,11 @@
         <item>Budi Oktaviyan</item>
         <item>Hendi Santika</item>
         <item>Sidiq Permana</item>
+        <item>Jake Wharton</item>
     </string-array>
 
     <string-array name="location">
-        <item>Pittsburgh, PA, USA</item>
+        <item>Sidoarjo, Jawa Timur, Indonesia</item>
         <item>New Delhi, India</item>
         <item>California</item>
         <item>Sydney, Australia</item>
@@ -48,10 +50,11 @@
         <item>Jakarta, Indonesia</item>
         <item>Bojongsoang - Bandung Jawa Barat</item>
         <item>Jakarta Indonesia</item>
+        <item>Pittsburgh, PA, USA</item>
     </string-array>
 
     <integer-array name="repository">
-        <item>102</item>
+        <item>43</item>
         <item>37</item>
         <item>9</item>
         <item>30</item>
@@ -61,10 +64,11 @@
         <item>110</item>
         <item>1064</item>
         <item>65</item>
+        <item>102</item>
     </integer-array>
 
     <string-array name="company">
-        <item>Google, Inc.</item>
+        <item>Breakpoint.id</item>
         <item>MindOrksOpenSource</item>
         <item>Google</item>
         <item>Google working on @android</item>
@@ -74,10 +78,11 @@
         <item>KotlinID</item>
         <item>JVMDeveloperID @KotlinID @IDDevOps</item>
         <item>Nusantara Beta Studio</item>
+        <item>Google, Inc.</item>
     </string-array>
 
     <integer-array name="followers">
-        <item>56995</item>
+        <item>8</item>
         <item>5153</item>
         <item>7972</item>
         <item>14725</item>
@@ -87,10 +92,11 @@
         <item>178</item>
         <item>428</item>
         <item>465</item>
+        <item>56995</item>
     </integer-array>
 
     <integer-array name="following">
-        <item>12</item>
+        <item>4</item>
         <item>2</item>
         <item>0</item>
         <item>1</item>
@@ -100,6 +106,7 @@
         <item>23</item>
         <item>61</item>
         <item>10</item>
+        <item>12</item>
     </integer-array>
 
     <integer-array name="avatar">
@@ -113,5 +120,6 @@
         <item>@drawable/user8</item>
         <item>@drawable/user9</item>
         <item>@drawable/user10</item>
+        <item>@drawable/user11</item>
     </integer-array>
 </resources>
