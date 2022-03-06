@@ -1,5 +1,6 @@
 package me.daffakurnia.android.firstsubmission
 
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -24,6 +25,15 @@ class ListUserAdapter(private val listUser: ArrayList<User>): RecyclerView.Adapt
         holder.imgUser.setImageResource(photo!!)
         holder.textUsername.text = username
         holder.textName.text = name
+        holder.itemView.setOnClickListener {
+            val userDetail = DetailUser(
+                photo, username, name
+            )
+
+            val intent = Intent(holder.itemView.context, DetailActivity::class.java)
+            intent.putExtra(DetailActivity.EXTRA_USER, userDetail)
+            holder.itemView.context.startActivity(intent)
+        }
     }
 
     override fun getItemCount(): Int = listUser.size

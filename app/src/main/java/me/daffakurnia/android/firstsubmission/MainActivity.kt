@@ -29,7 +29,7 @@ class MainActivity : AppCompatActivity() {
             val photo = resources.obtainTypedArray(R.array.avatar)
             val userList = ArrayList<User>()
             for (i in name.indices) {
-                userList.add(User(name[i], username[i], photo.getResourceId(i, -1)))
+                userList.add(User(username[i], name[i], photo.getResourceId(i, -1)))
             }
             return userList
         }
