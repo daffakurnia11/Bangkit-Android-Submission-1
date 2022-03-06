@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import me.daffakurnia.android.firstsubmission.data.User
 
 class ListUserAdapter(private val listUser: ArrayList<User>): RecyclerView.Adapter<ListUserAdapter.ListViewHolder>() {
     class ListViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
@@ -21,13 +22,13 @@ class ListUserAdapter(private val listUser: ArrayList<User>): RecyclerView.Adapt
     }
 
     override fun onBindViewHolder(holder: ListViewHolder, position: Int) {
-        val (username, name, photo) = listUser[position]
+        val (username, name, photo, location, followers, following, repository, company) = listUser[position]
         holder.imgUser.setImageResource(photo!!)
         holder.textUsername.text = username
         holder.textName.text = name
         holder.itemView.setOnClickListener {
-            val userDetail = DetailUser(
-                photo, username, name
+            val userDetail = User(
+                username, name, photo, location, followers, following, repository, company
             )
 
             val intent = Intent(holder.itemView.context, DetailActivity::class.java)
