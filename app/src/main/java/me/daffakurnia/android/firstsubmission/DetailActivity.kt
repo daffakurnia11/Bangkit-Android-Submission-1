@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
+import com.bumptech.glide.Glide
 import me.daffakurnia.android.firstsubmission.data.User
 
 class DetailActivity : AppCompatActivity() {
@@ -31,7 +32,10 @@ class DetailActivity : AppCompatActivity() {
 
         supportActionBar?.title = "${detailUser?.username.toString()} Detail Account"
 
-        detailUser?.photo?.let { imgDetailUser.setImageResource(it) }
+        Glide.with(this)
+            .load(detailUser?.photo)
+            .circleCrop()
+            .into(imgDetailUser)
         textDetailUsername.text = detailUser?.username.toString()
         textDetailName.text = detailUser?.name.toString()
         textDetailLocation.text = detailUser?.location.toString()

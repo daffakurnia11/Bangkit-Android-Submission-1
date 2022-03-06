@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
 import me.daffakurnia.android.firstsubmission.data.User
 
 class ListUserAdapter(private val listUser: ArrayList<User>): RecyclerView.Adapter<ListUserAdapter.ListViewHolder>() {
@@ -26,7 +27,11 @@ class ListUserAdapter(private val listUser: ArrayList<User>): RecyclerView.Adapt
         holder.imgUser.setImageResource(photo!!)
         holder.textUsername.text = username
         holder.textName.text = name
-        holder.itemView.setOnClickListener {
+        Glide.with(holder.itemView.context)
+            .load(photo)
+            .circleCrop()
+            .into(holder.imgUser)
+        holder.imgUser.setOnClickListener {
             val userDetail = User(
                 username, name, photo, location, followers, following, repository, company
             )
