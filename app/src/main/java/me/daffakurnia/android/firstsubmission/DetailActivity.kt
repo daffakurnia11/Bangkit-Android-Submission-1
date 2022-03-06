@@ -49,7 +49,8 @@ class DetailActivity : AppCompatActivity() {
         val btnGithubProfile: Button = findViewById(R.id.btn_github_profile)
         btnGithubProfile.setOnClickListener {
             val github = "https://github.com"
-            val githubAction = Intent(Intent.ACTION_VIEW, Uri.parse("$github/${detailUser?.username.toString()}"))
+            val githubAction =
+                Intent(Intent.ACTION_VIEW, Uri.parse("$github/${detailUser?.username.toString()}"))
             startActivity(githubAction)
         }
     }

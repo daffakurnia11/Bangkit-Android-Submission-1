@@ -36,7 +36,18 @@ class MainActivity : AppCompatActivity() {
 
             val userList = ArrayList<User>()
             for (i in name.indices) {
-                userList.add(User(username[i], name[i], photo.getResourceId(i, -1), location[i], company[i], followers[i], following[i], repository[i]))
+                userList.add(
+                    User(
+                        username[i],
+                        name[i],
+                        photo.getResourceId(i, -1),
+                        location[i],
+                        company[i],
+                        followers[i],
+                        following[i],
+                        repository[i]
+                    )
+                )
             }
             return userList
         }
